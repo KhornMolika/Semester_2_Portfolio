@@ -29,7 +29,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 12% 2rem;
+  padding: 2rem 10rem 2rem;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -53,7 +53,7 @@ body {
 .navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 2.8rem;
   font-weight: 500;
   transition: 0.3s ease;
 }
@@ -74,9 +74,10 @@ section {
 .home {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-center;
   gap: 15rem;
-  margin-top: 3rem;
+  height: 100vh;
+  padding: 0 10rem;
 }
 .home-content {
   display: flex;
@@ -90,6 +91,7 @@ span {
 .logo span {
   color: var(--main-color);
 }
+
 .home-content h3 {
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -105,9 +107,8 @@ span {
   border-radius: 50%;
 }
 .home-img img {
-  position: relative;
-  top: 50%;
-  bottom: 50%;
+  width: 100%;
+  height: 100%;
   width: 32vw;
   border-radius: 50%;
   cursor: pointer;
@@ -224,7 +225,7 @@ span {
   }
 }
 .heading {
-  font-size: 8rem;
+  font-size: 5rem;
   text-align: center;
   margin: 5rem 0;
 }
@@ -319,6 +320,7 @@ span {
 .services {
   background-color: var(--bg-color);
   color: black;
+  padding: 10rem 10rem 10rem;
 }
 .services h2 {
   margin-bottom: 5rem;
@@ -332,7 +334,7 @@ span {
 }
 .services-box {
   background-color: var(--main-color);
-  height: 300px;
+  height: 350px;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
@@ -348,10 +350,9 @@ span {
   display: flex;
   flex-direction: column;
   text-align: left;
-  max-height: 200px;
   justify-content: left;
   align-items: baseline;
-  padding: 5rem 5rem;
+  padding: 3rem 3rem;
 }
 .services-info h4 {
   font-size: 3rem;
@@ -371,12 +372,15 @@ span {
 }
 .project-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); */
   place-items: center;
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   row-gap: 5rem;
+  gap: 5rem;
 }
 .project-card {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -386,7 +390,7 @@ span {
   border: 2px solid var(--main-color);
   border-radius: 3rem;
   gap: 2rem;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
@@ -397,8 +401,8 @@ span {
   transform: scale(1.02);
 }
 .project-card img {
-  max-width: 300px;
-  /* height: 225px; */
+  max-width: 270px;
+  height: 225px;
   border-radius: 2rem;
   object-fit: cover;
 }
@@ -420,7 +424,7 @@ span {
   justify-content: center;
 }
 .testimonials .heading {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .testimonials-box img {
   width: 15rem;
@@ -436,7 +440,7 @@ span {
   gap: 2rem;
 }
 .testimonials-item {
-  min-width: 330px;
+  min-width: 300px;
   max-width: 450px;
   background-color: rgba(0, 0, 0, 0.7);
   border: 3px solid rgba(238, 238, 238, 0.2);
@@ -560,17 +564,20 @@ span {
   font-size: 16px;
   color: white;
 }
-@media (max-width: 1285px) {
+@media (max-width: 1280px) {
   html {
     font-size: 55%;
   }
   .services-container {
     padding-bottom: 7rem;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 5rem;
   }
   .testimonials-item {
     margin: 0;
+  }
+  .home {
+    justify-content: space-between;
+    gap: 10rem;
   }
 }
 
@@ -581,18 +588,8 @@ span {
   section {
     padding: 10rem 3% 2rem;
   }
-  .home {
-    gap: 0;
-  }
-  .home-img img {
-    transform: translateX(-10%);
-    width: 55vw;
-  }
-  .home-content {
-    width: 450px;
-  }
   .timeline-items::before {
-    left: 7px;
+    left: 20px;
   }
   .timeline-item:nth-child(odd) {
     padding-right: 0;
@@ -600,22 +597,19 @@ span {
   }
   .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
-    padding-left: 40px;
+    padding-left: 60px;
   }
   .timeline-dot {
-    left: 0;
+    left: 12px;
   }
   .timeline-content {
-    width: 90%;
+    width: 95%;
   }
   .services {
-    padding-bottom: 7rem;
+    padding: 5rem;
   }
   .wrapper {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .testimonials-item {
-    min-width: 550px;
   }
   .contact form {
     flex-direction: column;
@@ -646,7 +640,6 @@ span {
     display: block;
   }
   .services-box .services-info {
-    height: 260px;
     padding: 3rem 3rem;
   }
   .navbar a {
@@ -659,9 +652,26 @@ span {
     display: none;
   }
   .home {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    height: auto;
+    padding: 15rem 0 10rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-img {
     display: flex;
-    flex-direction: column-reverse !important;
-    margin: 5rem 4rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-img img {
+    width: 60%;
+    height: 60%;
+  }
+  .home-content {
+    align-items: center;
+    padding: 0 3rem;
   }
   .home-content h3 {
     font-size: 2.6rem;
@@ -671,16 +681,39 @@ span {
     margin-top: 3rem;
   }
   .home-content p {
+    text-align: center;
     max-width: 600px;
-    margin: 0 auto;
-  }
-  .home-img {
-    width: 56vw;
   }
   .services h2 {
     margin-bottom: 3rem;
   }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 3rem;
+  }
+  .logo {
+    font-size: 2.5rem;
+  }
   .services-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .services-info {
+    height: auto;
+    margin-top: 0;
+  }
+  .services-box {
+    height: 250px;
+  }
+  .services-info h4 {
+    font-size: 2rem;
+  }
+  .project-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .services-box {
+    height: 320px;
   }
 }
