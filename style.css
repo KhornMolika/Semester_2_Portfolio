@@ -334,7 +334,7 @@ span {
 }
 .services-box {
   background-color: var(--main-color);
-  height: 350px;
+  height: 200px;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
@@ -579,6 +579,9 @@ span {
     justify-content: space-between;
     gap: 10rem;
   }
+  .services-box {
+    height: 250px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -589,7 +592,7 @@ span {
     padding: 10rem 3% 2rem;
   }
   .timeline-items::before {
-    left: 20px;
+    left: 10px;
   }
   .timeline-item:nth-child(odd) {
     padding-right: 0;
@@ -597,16 +600,19 @@ span {
   }
   .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
-    padding-left: 60px;
+    padding-left: 40px;
   }
   .timeline-dot {
-    left: 12px;
+    left: 2px;
   }
   .timeline-content {
     width: 95%;
   }
   .services {
     padding: 5rem;
+  }
+  .services-box {
+    height: 280px;
   }
   .wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -684,6 +690,9 @@ span {
     text-align: center;
     max-width: 600px;
   }
+  .services-box {
+    height: 300px;
+  }
   .services h2 {
     margin-bottom: 3rem;
   }
@@ -695,16 +704,19 @@ span {
   .logo {
     font-size: 2.5rem;
   }
+  .timeline-content{
+    padding: 20px;
+}
   .services-container {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .services-info {
-    height: auto;
-    margin-top: 0;
   }
   .services-box {
     height: 250px;
   }
+  .services-info {
+    height: auto;
+    margin-top: 0;
+  } 
   .services-info h4 {
     font-size: 2rem;
   }
